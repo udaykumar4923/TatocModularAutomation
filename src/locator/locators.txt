@@ -1,0 +1,8 @@
+NAME: 																      :TYPE:                                                          :VALUE:															
+Basic_course_button:                                                    :linkText:                                                     :Basic Course: 
+Green_gridbox:         													:className:													     :greenbox:
+Red_gridbox:															:className:                                                       :redbox:
+First_box_color:														   :id:															  :answer:
+Second_box_color:                                                          :id:															  :answer:
+Repaint_button:															:linkText:													    :Repaint Box 2:
+Proceed_button: 														:linkText:														  :proceed:

@@ -5,8 +5,15 @@
     <classes>
       <class name="test.MainTest">
         <methods>
+          <include name="attemptTokenGenerationPage"/>
+          <include name="closeBrowser"/>
+          <include name="attemptGridBoxPage"/>
           <include name="attemptFrameAndDungeonPage"/>
+          <include name="verifyEndPage"/>
+          <include name="attemptPopupWindowsPage"/>
           <include name="openTatocLink"/>
+          <include name="attemptClickingBasicCourse"/>
+          <include name="attemptDragAndDropPage"/>
         </methods>
       </class> <!-- test.MainTest -->
     </classes>

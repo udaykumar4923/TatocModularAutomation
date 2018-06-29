@@ -38,17 +38,26 @@ public class FrameAndDungeonActions {
 		driver.switchTo().defaultContent();
 	}
 	
+	
 	private void matchColor() {
 		String box1Color = getColorOfBox1();
+		System.out.println("getting color of box1");
 		String box2Color = getColorOfBox2();
+		System.out.println("getting color of  box2");
+		System.out.println("repainting until color is different");
 		while(box1Color.equals(box2Color) != true) {
 			repaint();
 			box2Color = getColorOfBox2();
 		}
 	}
+	
+	
 	public void proceed() {
+		System.out.println("switching to main frame");
 		driver.switchTo().frame("main");
+		System.out.println("finding proceed button to click");
 		frameAndDungeonElementLocators.getWebElement("Proceed_button").click();
+		System.out.println("clicked on proceed button");
 	}
 	
 	
@@ -56,13 +65,17 @@ public class FrameAndDungeonActions {
 		proceed();
 		String expectedUrl = "http://10.0.1.86/tatoc/error";
 		assertTrue(expectedUrl.contains(driver.getCurrentUrl()));
+		System.out.println("navigated to error page");
 		driver.navigate().back();
+		System.out.println("navigating back from error page");
 	}
 	
 	public void isclickingWithmatchingColorsTakesToDragAndDropBoxPage() {
 		matchColor();
+		System.out.println("color matched");
 		proceed();
 		String expectedUrl = "http://10.0.1.86/tatoc/basic/drag";
-		assertTrue(expectedUrl.contains(driver.getCurrentUrl()));	
+		assertTrue(expectedUrl.contains(driver.getCurrentUrl()));
+		System.out.println("navigating to DragAndDropPage");
 	}
 }
